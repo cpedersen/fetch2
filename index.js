@@ -14,12 +14,12 @@ function printResults(responseJson) {
   const num = array_urls.length;
   console.log(`${num} random dogs selected`);
   
-  for (let i=0; i < num; i++) {
-    console.log(`Dog: ${array_urls[i]}`)
-    $(
-      `<img src="${array_urls[i]}" class="dog-img">`
-    ).appendTo('#results-img');
-  }
+  $('#results-img').empty(); 
+
+  $.each(array_urls, function(key) {
+    console.log(key);
+    $('#results-img').append(`<img src="${array_urls[key]}" class="dog-img">`);
+  });
 
   //display the results section
   $('.results').removeClass('hidden');

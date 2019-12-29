@@ -31,5 +31,17 @@
     border-radius: 25px;
   }
 
+  #results-img {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }
+
+  .dog-img {
+    padding: 1%;
+    margin: auto;
+    height: auto;
+    width: auto;
+  }
 
   
